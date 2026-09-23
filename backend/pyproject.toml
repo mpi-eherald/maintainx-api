@@ -1,0 +1,55 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "annotated-doc==0.0.5",
+    "annotated-types==0.8.0",
+    "anyio==4.15.1",
+    "apscheduler==3.11.3",
+    "certifi==2026.7.22",
+    "click==8.5.0",
+    "fastapi==0.141.1",
+    "greenlet==3.5.5",
+    "h11==0.16.0",
+    "httpcore==1.0.9",
+    "httptools==0.8.0",
+    "httpx==0.28.1",
+    "idna==3.19",
+    "jinja2==3.1.6",
+    "markupsafe==3.0.3",
+    "psycopg2-binary==2.9.12",
+    "pydantic==2.13.5",
+    "pydantic-core==2.46.5",
+    "python-benedict>=0.34.1",
+    "python-dotenv==1.2.3",
+    "pyyaml==6.0.3",
+    "sqlalchemy==2.0.52",
+    "sqlmodel==0.0.42",
+    "starlette==1.6.0",
+    "typing-extensions==4.16.0",
+    "typing-inspection==0.4.4",
+    "tzdata==2026.3",
+    "tzlocal==5.4.4",
+    "uv==0.12.15",
+    "uvicorn==0.52.4",
+    "watchfiles==1.2.0",
+    "websockets==17.1",
+]
+
+[project.scripts]
+backend = "backend:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "taskipy>=1.14.1",
+]
+
+[tool.taskipy.tasks]
+dev = "py -m main.py"

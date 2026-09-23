@@ -1,4 +1,0 @@
-dotenv
-httpx
-fastapi[standard]
-uv
